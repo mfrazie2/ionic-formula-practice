@@ -1,0 +1,53 @@
+* {
+	text-align: center;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.column-title, .question {
+	display: flex;
+	justify-content: space-around;
+}
+
+.column-title {
+	text-transform: uppercase;
+}
+
+.question ul li {
+	display: inline-block;
+	width: auto;
+
+}
+.question {
+	border-bottom: 1px solid;
+	border-bottom-color: black;
+}
+
+/*.cation-name {
+	float: left;
+	padding-left: 30px;
+}
+
+.anion-name {
+	float: left;
+	padding-left: 30px;
+}
+
+*/
+.hide {
+	display: none;
+}
+
+.name {
+	text-transform: capitalize;
+}
+
+.hint {
+	height: 25px;
+	margin: 0;
+}
+
+.cation, .anion {
+	width: 100px;
+}

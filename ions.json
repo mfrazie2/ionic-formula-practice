@@ -1,0 +1,206 @@
+{
+  "cations": [
+    {
+      "name": "sodium",
+      "formula": "Na<sup>+</sup>"
+    },
+    {
+      "name": "lithium",
+      "formula": "Li<sup>+</sup>"
+    },
+    {
+      "name": "potassium",
+      "formula": "K<sup>+</sup>"
+    },
+    {
+      "name": "ammonium",
+      "formula": "NH<sub>4</sub><sup>+</sup>"
+    },
+    {
+      "name": "calcium",
+      "formula": "Ca<sup>2+</sup>"
+    },
+    {
+      "name": "magnesium",
+      "formula": "Mg<sup>2+</sup>"
+    },
+    {
+      "name": "strontium",
+      "formula": "Sr<sup>2+</sup>"
+    },
+    {
+      "name": "barium",
+      "formula": "Ba<sup>2+</sup>"
+    },
+    {
+      "name": "iron(II)",
+      "formula": "Fe<sup>2+</sup>"
+    },
+    {
+      "name": "iron(III)",
+      "formula": "Fe<sup>3+</sup>"
+    },
+    {
+      "name": "cobalt(II)",
+      "formula": "Co<sup>2+</sup>"
+    },
+    {
+      "name": "cobalt(III)",
+      "formula": "Co<sup>3+</sup>"
+    },
+    {
+      "name": "manganese(VII)",
+      "formula": "Mn<sup>7+</sup>"
+    },
+    {
+      "name": "silver",
+      "formula": "Ag<sup>+</sup>"
+    },
+    {
+      "name": "mercury(II)",
+      "formula": "Hg<sup>2+</sup>"
+    },
+    {
+      "name": "mercury(I)",
+      "formula": "Hg<sub>2</sub><sup>2+</sup>"
+    },
+    {
+      "name": "aluminum",
+      "formula": "Al<sup>3+</sup>"
+    },
+    {
+      "name": "tin(II)",
+      "formula": "Sn<sup>2+</sup>"
+    },
+    {
+      "name": "tin(IV)",
+      "formula": "Sn<sup>4+</sup>"
+    },
+    {
+      "name": "lead(II)",
+      "formula": "Pb<sup>2+</sup>"
+    },
+    {
+      "name": "lead(IV)",
+      "formula": "Pb<sup>4+</sup>"
+    },
+    {
+      "name": "gold(III)",
+      "formula": "Au<sup>3+</sup>"
+    },
+    {
+      "name": "copper(II)",
+      "formula": "Cu<sup>2+</sup>"
+    },
+    {
+      "name": "copper(I)",
+      "formula": "Cu<sup>+</sup>"
+    },
+    {
+      "name": "zinc",
+      "formula": "Zn<sup>2+</sup>"
+    }
+  ],
+  "anions": [
+    {
+      "name": "fluoride",
+      "formula": "F<sup>-</sup>"
+    },
+    {
+      "name": "chloride",
+      "formula": "Cl<sup>-</sup>"
+    },
+    {
+      "name": "bromide",
+      "formula": "Br<sup>-</sup>"
+    },
+    {
+      "name": "iodide",
+      "formula": "I<sup>-</sup>"
+    },
+    {
+      "name": "oxide",
+      "formula": "O<sup>2-</sup>"
+    },
+    {
+      "name": "sulfide",
+      "formula": "S<sup>2-</sup>"
+    },
+    {
+      "name": "nitride",
+      "formula": "N<sup>3-</sup>"
+    },
+    {
+      "name": "phosphide",
+      "formula": "P<sup>3-</sup>"
+    },
+    {
+      "name": "chlorate",
+      "formula": "ClO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "perchlorate",
+      "formula": "ClO<sub>4</sub><sup>-</sup>"
+    },
+    {
+      "name": "chlorite",
+      "formula": "ClO<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "hypochlorite",
+      "formula": "ClO<sup>-</sup>"
+    },
+    {
+      "name": "nitrate",
+      "formula": "NO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "nitrite",
+      "formula": "NO<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "acetate",
+      "formula": "C<sub>2</sub>H<sub>3</sub>O<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "phosphate",
+      "formula": "PO<sub>4</sub><sup>3-</sup>"
+    },
+    {
+      "name": "phosphite",
+      "formula": "PO<sub>3</sub><sup>3-</sup>"
+    },
+    {
+      "name": "sulfate",
+      "formula": "SO<sub>4</sub><sup>2-</sup>"
+    },
+    {
+      "name": "sulfite",
+      "formula": "SO<sub>3</sub><sup>2-</sup>"
+    },
+    {
+      "name": "chromate",
+      "formula": "CrO<sub>4</sub><sup>2-</sup>"
+    },
+    {
+      "name": "chromate",
+      "formula": "Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>"
+    },
+    {
+      "name": "carbonate",
+      "formula": "CO<sub>3</sub><sup>2-</sup>"
+    },
+    {
+      "name": "bicarbonate",
+      "formula": "HCO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "permanganate",
+      "formula": "MnO<sub>4</sub><sup>-</sup>"
+    },
+    {
+      "name": "hydroxide",
+      "formula": "OH<sup>-</sup>"
+    }
+  ]
+}
