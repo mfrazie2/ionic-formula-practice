@@ -1,8 +1,23 @@
+:root {
+	--sigmarOne: 'Sigmar One', cursive;
+	--muli: 'Muli', sans-serif;
+  --oneHundred: 100%;
+}
+
 * {
 	text-align: center;
 	width: auto;
 	margin: 0;
 	padding: 0;
+}
+
+.title {
+	font-family: var(--sigmarOne);
+}
+
+.instructions {
+	font-family: var(--muli);
+	font-weight: 300;
 }
 
 .column-title, .question {
@@ -11,6 +26,7 @@
 }
 
 .column-title {
+	font-family: var(--sigmarOne);
 	text-transform: uppercase;
 }
 
@@ -50,4 +66,5 @@
 
 .cation, .anion {
 	width: 100px;
+	font-family: var(--muli);	
 }
