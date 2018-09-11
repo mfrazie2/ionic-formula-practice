@@ -5,6 +5,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Muli|Sigmar+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css"
 		href="ionicStyle.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 	<h1 class="title">Ionic Formula Practice</h1>
@@ -19,8 +20,29 @@
 			<p>Anion</p>
 		</div>
 	<div id="questions">
-  </div>
+	</div>
+
+	<div id="app">
+		<div id="questions">
+			<div v-for="ionPair in ionPairs" class="question">
+				<ion
+					v-bind:ion="ionPair.cation"
+					v-bind:type="'cation'"
+					v-bind:count="ionPair.count"
+					v-bind:show-hint="ionPair.showCationHint"
+				></ion>
+				<ion
+					v-bind:ion="ionPair.anion"
+					v-bind:type="'anion'"
+					v-bind:count="ionPair.count"
+					v-bind:show-hint="ionPair.showAnionHint"
+				></ion>
+			</div>
+		</div>
+	</div>
 
 <script src="IonicFormulaPractice.js"></script>
+<!-- <script src="vue-script.js"></script> -->
+
 </body>
 </html>

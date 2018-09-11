@@ -1,7 +1,9 @@
 (function () {
-	function Ion(name, formula) {
-		this.name = name;
-		this.formula = formula;
+	class Ion {
+		constructor(name, formula) {
+			this.name = name;
+			this.formula = formula;
+		}
 	}
 	//creating individual cations
 	let sodium = new Ion("sodium", "Na<sup>+</sup>"),
@@ -64,7 +66,39 @@
 
 	document.getElementById('new-ion-button').addEventListener('click', setIonsToPage);
 
-	setIonsToPage();
+	let app = new Vue({
+		el: '#app',
+		data: {
+			ionPairs: []
+		},
+	});
+
+	Vue.component('ion', {
+		props: ['ion', 'type', 'count', 'showHint'],
+		// computed: {
+		// 	showThisHint: function() {
+		// 		return this.showHint;
+		// 	},
+		// },
+		data: function() {
+			return {
+				showIonHint: this.showHint
+			};
+		},
+		template: `
+			<div :class="type">
+				<p class="name">{{ ion.name }}</p>
+				<button class="hint" :id="type + '-' + count" v-if="!showIonHint" v-on:click="showThisHint()">See Forumula</button>
+				<p v-if="showIonHint" :id="'hint-' + type + '-' + count" v-html="ion.formula"></p>
+			</div>`,
+			methods: {
+				showThisHint() {
+					this.showIonHint = true;
+				}
+			}
+	});
+
+	// setIonsToPage();
 
 	function getRandomIndex(list) {
 		var randomNum = Math.random();
@@ -81,15 +115,22 @@
 		let newCation = getRandomIon(cations),
 				newAnion = getRandomIon(anions),
 				newQuestion = createNewQuestion(newCation,newAnion,_count);
-		
-		getElementById('questions').appendChild(newQuestion);
+
+		// getElementById('questions').appendChild(newQuestion);
 		_count++;
+		app.ionPairs.push({
+			cation: newCation,
+			anion: newAnion,
+			count: _count.toString(),
+			showCationHint: false,
+			showAnionHint: false,
+		});
 	}
 
 	function makeIonVisible(id) {
 		let btnEl = getElementById(id),
 				hintEl = getElementById(`hint-${id}`);
-		
+
 		removeClass(hintEl, 'hide');
 		addClass(hintEl, 'hint');
 		addClass(btnEl, 'hide');
@@ -112,7 +153,7 @@
 	function createNewQuestion(newCation,newAnion,count) {
 		let question = document.createElement('div');
 		addClass(question, 'question');
-		
+
 		question.appendChild(createIonHTML(newCation,'cation',count));
 		question.appendChild(createIonHTML(newAnion,'anion',count));
 
@@ -134,7 +175,7 @@
 				ionName = document.createElement('p'),
 				btnHint = document.createElement('button'),
 				ionHint = document.createElement('p');
-		
+
 		addClass(ion, type);
 
 		addClass(ionName, 'name');
@@ -146,7 +187,7 @@
 		btnHint.addEventListener('click', (event) => {
 			makeIonVisible(event.target.id);
 		});
-		
+
 		addClass(ionHint, 'hide');
 		ionHint.setAttribute('id', `hint-${type}-${count}`);
 		ionHint.innerHTML = ionObj.formula;
@@ -156,5 +197,5 @@
 		ion.appendChild(ionHint);
 
 		return ion;
-	} 
+	}
 })()
