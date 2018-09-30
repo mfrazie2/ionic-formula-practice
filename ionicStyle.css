@@ -1,7 +1,12 @@
 :root {
 	--sigmarOne: 'Sigmar One', cursive;
 	--muli: 'Muli', sans-serif;
-  --oneHundred: 100%;
+	--oneHundred: 100%;
+	--light-green: #c6ebbe;
+	--mint-green: #a9dbb8;
+	--blue-green: #7ca5b8;
+	--light-blue: #DAE0F2;
+	--dark-blue: #01006b;
 }
 
 * {
@@ -9,50 +14,87 @@
 	width: auto;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--light-blue);
+}
+
+main {
+	background-color: var(--dark-blue);
+	max-width: 960px;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+header {
+	position: fixed;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	height: 180px;
+}
+
+footer {
+	position: fixed;
+	color: var(--blue-green);
+	font-family: var(--muli);
+	font-size: 16px;
+	bottom: 0;
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+	width: 100%;
+	height: 24px;
+}
+
+#app {
+	padding: 0 24px;
+	overflow: auto;
+	top: 180px;
+	position: relative;
+	height: calc(100vh - 224px);
 }
 
 .title {
 	font-family: var(--sigmarOne);
+	color: var(--blue-green);
+	font-size: 48px;
 }
 
 .instructions {
 	font-family: var(--muli);
 	font-weight: 300;
+	color: var(--mint-green);
 }
 
 .column-title, .question {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
+	min-height: 60px;
+	max-width: 980px;
+	margin: auto;
 }
 
 .column-title {
 	font-family: var(--sigmarOne);
 	text-transform: uppercase;
+	color: var(--mint-green);
 }
 
-.question ul li {
-	display: inline-block;
-	width: auto;
-
-}
 .question {
-	border-bottom: 1px solid;
-	border-bottom-color: black;
+	border-bottom: 1px solid var(--blue-green);
 }
 
-/*.cation-name {
-	float: left;
-	padding-left: 30px;
-}
-
-.anion-name {
-	float: left;
-	padding-left: 30px;
-}
-
-*/
 .hide {
 	display: none;
+}
+
+.name, .formula {
+	color: var(--mint-green);
+	font-size: 20px;
 }
 
 .name {
@@ -62,9 +104,14 @@
 .hint {
 	height: 25px;
 	margin: 0;
+	background: var(--light-green);
+	color: var(--dark-blue);
 }
 
 .cation, .anion {
-	width: 100px;
-	font-family: var(--muli);	
+	min-width: 100px;
+	font-family: var(--muli);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

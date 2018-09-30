@@ -58,9 +58,9 @@
 		permanganate = new Ion("permanganate", "MnO<sub>4</sub><sup>-</sup>"),
 		hydroxide = new Ion("hydroxide", "OH<sup>-</sup>");
 	//create arrays to contain the ion objects
-	let cations = [], anions = [];
-	cations.push(sodium, lithium, potassium, ammonium, calcium, magnesium, strontium, barium, iron2, iron3, cobalt2, cobalt3, manganese7, silver, mercury2, mercury1, aluminum, tin2, tin4, lead2, lead4, gold3, copper2, copper1, zinc);
-	anions.push(fluoride, chloride, bromide, iodide, oxide, sulfide, nitride, phosphide, chlorate, perchlorate, chlorite, hypochlorite, nitrate, nitrite, acetate, phosphate, phosphite, sulfate, sulfite, chromate, dichromate, carbonate, bicarbonate, permanganate, hydroxide);
+
+	let cations = [ sodium, lithium, potassium, ammonium, calcium, magnesium, strontium, barium, iron2, iron3, cobalt2, cobalt3, manganese7, silver, mercury2, mercury1, aluminum, tin2, tin4, lead2, lead4, gold3, copper2, copper1, zinc ];
+	let anions = [ fluoride, chloride, bromide, iodide, oxide, sulfide, nitride, phosphide, chlorate, perchlorate, chlorite, hypochlorite, nitrate, nitrite, acetate, phosphate, phosphite, sulfate, sulfite, chromate, dichromate, carbonate, bicarbonate, permanganate, hydroxide ];
 
 	let _count = 1;
 
@@ -75,11 +75,6 @@
 
 	Vue.component('ion', {
 		props: ['ion', 'type', 'count', 'showHint'],
-		// computed: {
-		// 	showThisHint: function() {
-		// 		return this.showHint;
-		// 	},
-		// },
 		data: function() {
 			return {
 				showIonHint: this.showHint
@@ -89,7 +84,7 @@
 			<div :class="type">
 				<p class="name">{{ ion.name }}</p>
 				<button class="hint" :id="type + '-' + count" v-if="!showIonHint" v-on:click="showThisHint()">See Forumula</button>
-				<p v-if="showIonHint" :id="'hint-' + type + '-' + count" v-html="ion.formula"></p>
+				<p v-if="showIonHint" class="formula" :id="'hint-' + type + '-' + count" v-html="ion.formula"></p>
 			</div>`,
 			methods: {
 				showThisHint() {
@@ -98,7 +93,7 @@
 			}
 	});
 
-	// setIonsToPage();
+	setIonsToPage();
 
 	function getRandomIndex(list) {
 		var randomNum = Math.random();
@@ -113,10 +108,8 @@
 
 	function setIonsToPage() {
 		let newCation = getRandomIon(cations),
-				newAnion = getRandomIon(anions),
-				newQuestion = createNewQuestion(newCation,newAnion,_count);
+				newAnion = getRandomIon(anions);
 
-		// getElementById('questions').appendChild(newQuestion);
 		_count++;
 		app.ionPairs.push({
 			cation: newCation,
@@ -127,75 +120,4 @@
 		});
 	}
 
-	function makeIonVisible(id) {
-		let btnEl = getElementById(id),
-				hintEl = getElementById(`hint-${id}`);
-
-		removeClass(hintEl, 'hide');
-		addClass(hintEl, 'hint');
-		addClass(btnEl, 'hide');
-		// var hintToChange = document.getElementById(id);
-		// hintToChange.style.visibility = "visible";
-	}
-
-	function getElementById(id) {
-		return document.getElementById(id);
-	}
-
-	function removeClass(el,className) {
-		el.removeAttribute('class', className);
-	}
-
-	function addClass(el,className) {
-		el.setAttribute('class', className);
-	}
-
-	function createNewQuestion(newCation,newAnion,count) {
-		let question = document.createElement('div');
-		addClass(question, 'question');
-
-		question.appendChild(createIonHTML(newCation,'cation',count));
-		question.appendChild(createIonHTML(newAnion,'anion',count));
-
-		return question;
-	}
-
-	function setHtml(newCation, newAnion, count) {
-		return `
-			// <div class="cation">
-				// <p class="name">${newCation.name}</p>
-				// <button class="hint" id="cation-${count}" onclick="makeIonVisible('cation-${count}')">See Formula</button>
-				// <p class="hide" id="hint-cation-${count}">${newCation.formula}</p>
-			// </div>
-		`;
-	}
-
-	function createIonHTML(ionObj,type,count) {
-		let ion = document.createElement('div'),
-				ionName = document.createElement('p'),
-				btnHint = document.createElement('button'),
-				ionHint = document.createElement('p');
-
-		addClass(ion, type);
-
-		addClass(ionName, 'name');
-		ionName.innerHTML = ionObj.name;
-
-		addClass(btnHint, 'hint');
-		btnHint.innerText = 'See Forumula';
-		btnHint.setAttribute('id', `${type}-${count}`);
-		btnHint.addEventListener('click', (event) => {
-			makeIonVisible(event.target.id);
-		});
-
-		addClass(ionHint, 'hide');
-		ionHint.setAttribute('id', `hint-${type}-${count}`);
-		ionHint.innerHTML = ionObj.formula;
-
-		ion.appendChild(ionName);
-		ion.appendChild(btnHint);
-		ion.appendChild(ionHint);
-
-		return ion;
-	}
 })()
