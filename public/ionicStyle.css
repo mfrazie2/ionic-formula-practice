@@ -50,6 +50,11 @@ footer {
 	height: 24px;
 }
 
+footer a {
+	color: var(--blue-green);
+	text-decoration: none;
+}
+
 #app {
 	padding: 0 24px;
 	overflow: auto;
