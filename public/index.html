@@ -28,8 +28,13 @@
 		<section id="app">
 			<div id="questions">
 				<div v-for="ionPair in ionPairs" class="question">
-					<ion v-bind:ion="ionPair.cation" v-bind:type="'cation'" v-bind:count="ionPair.count" v-bind:show-hint="ionPair.showCationHint"></ion>
-					<ion v-bind:ion="ionPair.anion" v-bind:type="'anion'" v-bind:count="ionPair.count" v-bind:show-hint="ionPair.showAnionHint"></ion>
+					<div class="ion-container">
+						<ion v-bind:ion="ionPair.cation" v-bind:type="'cation'" v-bind:count="ionPair.count" v-bind:show-hint="ionPair.showCationHint"></ion>
+						<ion v-bind:ion="ionPair.anion" v-bind:type="'anion'" v-bind:count="ionPair.count" v-bind:show-hint="ionPair.showAnionHint"></ion>
+					</div>
+					<div class="solution-container">
+						<solution v-bind:solution="ionPair.solution" v-bind:count="ionPair.count" v-bind:show-solution="ionPair.showSolution"></solution>
+					</div>
 				</div>
 			</div>
 		</section>

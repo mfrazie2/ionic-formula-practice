@@ -78,7 +78,7 @@ footer a {
 .column-title, .question {
 	display: flex;
 	justify-content: space-evenly;
-	min-height: 60px;
+	min-height: 125px;
 	max-width: 980px;
 	margin: auto;
 }
@@ -90,7 +90,18 @@ footer a {
 }
 
 .question {
+	display: flex;
+	flex-direction: column;
 	border-bottom: 1px solid var(--blue-green);
+}
+
+.ion-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.solution-container {
+	min-height: 50px;
 }
 
 .hide {
@@ -107,14 +118,29 @@ footer a {
 }
 
 .hint {
-	height: 25px;
+	height: 35px;
 	margin: 0;
+	background: transparent;
+	color: var(--light-green);
+	border-radius: 5px;
+	border-color: var(--mint-green);
+	border-width: 3px;
+	font-size: 15px;
+	padding: 3px;
+}
+
+.hint:hover {
 	background: var(--light-green);
 	color: var(--dark-blue);
 }
 
+button:focus {
+	outline: none;
+}
+
 .cation, .anion {
 	min-width: 100px;
+	min-height: 75px;
 	font-family: var(--muli);
 	display: flex;
 	flex-direction: column;
