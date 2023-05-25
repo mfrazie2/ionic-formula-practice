@@ -1,11 +1,15 @@
-"use client"
+"use client";
 
-import { Concert_One } from "next/font/google"
-import { Asul } from "next/font/google"
+import { Box, Heading } from '@chakra-ui/layout'
+import data from '../../data/ions.json'
 
 export default function IonList() {
 
     return (
-        <h1>Ion List</h1>
+        <>
+            <Heading as="h1">Ion List</Heading>
+            {data.cations.map(cation => (<Box color={'carmine'}><div dangerouslySetInnerHTML={{ __html: cation.formula }} /></Box>))}
+            {data.anions.map(anion => (<div dangerouslySetInnerHTML={{ __html: anion.formula }} />))}
+        </>
     )
 }
