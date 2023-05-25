@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Flex, Heading, Text } from '@chakra-ui/layout';
+import { Box, Flex } from '@chakra-ui/layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -11,8 +11,8 @@ export default function Navigation() {
     const pathName = usePathname();
 
     return (
-        <Box w="100%">
-            <Flex as="nav" dir='row' alignItems="center" justifyContent="space-between" maxW="1280px" px="80px" h="120px" bg="spaceCadet">
+        <Box w="100%" bg="spaceCadet">
+            <Flex as="nav" dir='row' alignItems="center" justifyContent="space-between" maxW="1280px" px="80px" h="120px" mx="auto">
                 <Link href="/">
                     <Image
                         src="/logo.svg"
