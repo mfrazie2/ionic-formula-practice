@@ -6,6 +6,13 @@ type Ion = {
     "formula": string;
 }
 
+function applyMagnitudeToIon(ion: Ion, magnitude: number) {
+    if (magnitude < 1) throw Error(`Magnitude cannot be less than 1`);
+    if (magnitude === 1) return ion.baseFormula;
+    const baseFormula = ion.requireParens ? `(${ion.baseFormula})` : ion.baseFormula
+    return `${baseFormula}<sub>${magnitude}</sub>`
+}
+
 function buildFormula(cation: Ion, anion: Ion) {
     if (cation.chargeMagnitude === anion.chargeMagnitude) {
         return `${cation.baseFormula}${anion.baseFormula}`;
@@ -16,34 +23,18 @@ function buildFormula(cation: Ion, anion: Ion) {
         let ratio = cation.chargeMagnitude / anion.chargeMagnitude;
         if (ratio % 1 === 0) {
             cationFormula = cation.baseFormula;
-            if (anion.requireParens) {
-                anionFormula = `(${anion.baseFormula})<sub>${ratio}</sub>`;
-            } else {
-                anionFormula = `${anion.baseFormula}<sub>${ratio}</sub>`;
-            }
+            anionFormula = applyMagnitudeToIon(anion, ratio);
             return `${cationFormula}${anionFormula}`;
         }
     } else {
         let ratio = anion.chargeMagnitude / cation.chargeMagnitude;
         if (ratio % 1 === 0) {
             anionFormula = anion.baseFormula;
-            if (cation.requireParens) {
-                cationFormula = `(${cation.baseFormula})<sub>${ratio}</sub>`;
-            } else {
-                cationFormula = `${cation.baseFormula}<sub>${ratio}</sub>`;
-            }
+            cationFormula = applyMagnitudeToIon(cation, ratio);
             return `${cationFormula}${anionFormula}`;
         }
     }
-    if (cation.requireParens) {
-        cationFormula = `(${cation.baseFormula})<sub>${anion.chargeMagnitude}</sub>`;
-    } else {
-        cationFormula = `${cation.baseFormula}<sub>${anion.chargeMagnitude}</sub>`;
-    }
-    if (anion.requireParens) {
-        anionFormula = `(${anion.baseFormula})<sub>${cation.chargeMagnitude}</sub>`;
-    } else {
-        anionFormula = `${anion.baseFormula}<sub>${cation.chargeMagnitude}</sub>`;
-    }
+    anionFormula = applyMagnitudeToIon(anion, cation.chargeMagnitude);
+    cationFormula = applyMagnitudeToIon(cation, anion.chargeMagnitude);
     return `${cationFormula}${anionFormula}`;
 }
