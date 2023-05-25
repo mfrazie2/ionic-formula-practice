@@ -1,12 +1,11 @@
 "use client"
 
-import { MikeDoesCoding } from "@/components/icons/mikedoescoding";
 import { Icon } from "@chakra-ui/icon";
 Image
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+import { FaEnvelope, FaGithubSquare, FaLinkedin, FaHome } from 'react-icons/fa'
 
 export default function Footer() {
     return (
@@ -24,7 +23,7 @@ export default function Footer() {
                         <Icon as={FaLinkedin} boxSize={5} color="spaceCadet" />
                     </Link>
                     <Link href="https://mikedoescoding.com/about" target="__blank" aria-label="View creator's about me page">
-                        <MikeDoesCoding boxSize={5} color="spaceCadet" />
+                        <Icon as={FaHome} boxSize={5} color="spaceCadet" />
                     </Link>
                 </Flex>
             </Flex>
