@@ -318,7 +318,7 @@
       "formula": "CrO<sub>4</sub><sup>2-</sup>"
     },
     {
-      "name": "chromate",
+      "name": "dichromate",
       "baseFormula": "Cr<sub>2</sub>O<sub>7</sub>",
       "chargeMagnitude": 2,
       "requireParens": true,
