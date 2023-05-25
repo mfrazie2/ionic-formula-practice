@@ -1,15 +1,17 @@
 "use client";
 
-import { Box, Heading } from '@chakra-ui/layout'
+import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
 import data from '../../data/ions.json'
+import IonColumn from './ion-column';
 
 export default function IonList() {
 
     return (
-        <>
-            <Heading as="h1">Ion List</Heading>
-            {data.cations.map(cation => (<Box color={'carmine'}><div dangerouslySetInnerHTML={{ __html: cation.formula }} /></Box>))}
-            {data.anions.map(anion => (<div dangerouslySetInnerHTML={{ __html: anion.formula }} />))}
-        </>
+        <Box maxW="1280px" p="40px 80px" mx="auto">
+            <Flex justifyContent="space-evenly">
+                <IonColumn ionList={data.cations} title="Cation" />
+                <IonColumn ionList={data.anions} title="Anion" />
+            </Flex>
+        </Box>
     )
 }
