@@ -1,6 +1,6 @@
 import Navigation from '@/components/common/navigation'
 import './globals.css'
-import Providers from './providers'
+import ChakraProviders from './providers/chakra-providers'
 import Footer from '@/components/common/footer'
 
 export const metadata = {
@@ -16,11 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>
+        <ChakraProviders>
           <Navigation />
           {children}
           <Footer />
-        </Providers>
+        </ChakraProviders>
       </body>
     </html>
   )

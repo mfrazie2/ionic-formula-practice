@@ -4,12 +4,12 @@ import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Concert_One } from "next/font/google"
 import { Asul } from "next/font/google"
-import { theme } from './theme'
+import { theme } from '../theme'
 
 const concertOne = Concert_One({ subsets: ['latin'], weight: '400' })
 const asul = Asul({ subsets: ['latin'], weight: '400' })
 
-export default function Providers({
+export default function ChakraProviders({
     children
 }: {
     children: React.ReactNode
