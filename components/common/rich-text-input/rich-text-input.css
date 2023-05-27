@@ -1,0 +1,23 @@
+@import "../../../node_modules/react-quill/dist/quill.snow.css";
+
+.richTextInput .ql-container {
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: #f5f3f5ff;
+}
+
+
+.richTextInput .ql-snow.ql-toolbar {
+  display: block;
+  background: #D9D9D9;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.richTextInput .ql-editor {
+  max-height: 4em;
+}
+
+.richTextInput .ql-fill {
+  fill: #171738ff;
+}
