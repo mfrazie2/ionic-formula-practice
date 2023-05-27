@@ -14,3 +14,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+main {
+  min-height: calc(100vh - 200px);
+  /* 200 is height of navigation and footer */
+}
