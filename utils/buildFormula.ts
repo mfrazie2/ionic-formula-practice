@@ -1,4 +1,4 @@
-type Ion = {
+export type Ion = {
     "name": string;
     "baseFormula": string;
     "chargeMagnitude": number;
@@ -13,7 +13,7 @@ function applyMagnitudeToIon(ion: Ion, magnitude: number) {
     return `${baseFormula}<sub>${magnitude}</sub>`
 }
 
-function buildFormula(cation: Ion, anion: Ion) {
+export function buildFormula(cation: Ion, anion: Ion) {
     if (cation.chargeMagnitude === anion.chargeMagnitude) {
         return `${cation.baseFormula}${anion.baseFormula}`;
     }

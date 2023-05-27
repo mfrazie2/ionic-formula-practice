@@ -1,3 +1,4 @@
+import { Ion } from "@/utils/buildFormula";
 import { Flex, Heading, Text } from "@chakra-ui/layout";
 
 interface Props {

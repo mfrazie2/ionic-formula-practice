@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
+import { Box, Flex } from '@chakra-ui/layout'
 import data from '../../data/ions.json'
 import IonColumn from './ion-column';
 
