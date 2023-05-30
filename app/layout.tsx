@@ -1,7 +1,7 @@
 import Navigation from '@/components/common/navigation'
 import './globals.css'
-import ChakraProviders from './providers/chakra-providers'
 import Footer from '@/components/common/footer'
+import Providers from './providers'
 
 export const metadata = {
   title: 'Ionic Formula Practice',
@@ -16,13 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ChakraProviders>
+        <Providers>
           <Navigation />
           <main>
             {children}
           </main>
           <Footer />
-        </ChakraProviders>
+        </Providers>
       </body>
     </html>
   )
