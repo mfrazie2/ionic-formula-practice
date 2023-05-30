@@ -1,38 +1,33 @@
 "use client";
 
 import { Box } from "@chakra-ui/layout";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import ReactQuill from 'react-quill';
 import "./rich-text-input.css";
-import { Button } from "@chakra-ui/button";
 import useRichTextOptions from "./use-rich-text-options";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { selectUserResponse } from "@/features/practice/selectors";
+import { actions } from "@/features/practice/slice";
 
-type Props = {
-  checkUserResponse: (x0: string) => boolean;
-}
-
-export default function RichTextInput({ checkUserResponse }: Props) {
+export default function RichTextInput() {
+  const dispatch = useAppDispatch();
+  const userResp = useAppSelector(selectUserResponse)
 
   const { formats, modules } = useRichTextOptions();
 
-  // Needs to be up at a higher level
-  const [editorHtml, setEditorHtml] = useState<ReactQuill.Value>('');
-
-  // Needs to be at a higher level
-  const handleCheckResponse = useCallback(() => {
-    console.log(checkUserResponse(editorHtml.toString()));
-  }, [editorHtml]);
+  const handleChange = useCallback((value: string) => {
+    dispatch(actions.setUserResponse(value));
+  }, []);
 
   return <Box className="richTextInput">
     <ReactQuill
-      onChange={setEditorHtml}
-      value={editorHtml}
+      onChange={handleChange}
+      value={userResp}
       modules={modules}
       formats={formats}
       placeholder="Enter formula"
       bounds=".richTextInput"
       theme={undefined}
     />
-    <Button onClick={handleCheckResponse}>Check answer</Button>
   </Box>
 }

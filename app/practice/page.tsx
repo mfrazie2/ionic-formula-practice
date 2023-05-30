@@ -8,6 +8,9 @@ import { Button } from "@chakra-ui/button";
 import { checkAnswer } from "@/utils/checkAnswer";
 import { buildFormula, Ion } from "@/utils/buildFormula";
 import RichTextInput from "@/components/common/rich-text-input";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { selectIsCorrect, selectUserResponse } from "@/features/practice/selectors";
+import { actions } from "@/features/practice/slice";
 
 function getRandomIndex(list: any[]) {
   var randomNum = Math.random();
@@ -21,6 +24,9 @@ function getRandomIon(arr: Ion[]) {
 }
 
 export default function Practice() {
+  const dispatch = useAppDispatch();
+  const userResp = useAppSelector(selectUserResponse);
+  const isCorrect = useAppSelector(selectIsCorrect);
   const [cation, setCation] = useState<Ion>(null!)
   const [anion, setAnion] = useState<Ion>(null!)
   const [answer, setAnswer] = useState<string>(null!);
@@ -34,9 +40,9 @@ export default function Practice() {
     setAnswer(buildFormula(cation, anion));
   }, [])
 
-  const checkUserResponse = useCallback((userResp: string) => {
-    return checkAnswer(userResp, answer);
-  }, [answer]);
+  const checkUserResponse = useCallback(() => {
+    dispatch(actions.setIsCorrect(checkAnswer(userResp, answer)));
+  }, [answer, userResp]);
 
   useEffect(() => {
     getPromptPair();
@@ -51,8 +57,16 @@ export default function Practice() {
         textTransform: 'capitalize'
       }}>{cation.name} {anion.name}</Text>}
 
-      <RichTextInput checkUserResponse={checkUserResponse} />
+      <RichTextInput />
+      <Button onClick={checkUserResponse}>Check answer</Button>
 
+      <Box>
+        {userResp && (isCorrect !== null) && (
+          isCorrect ? (
+            <Text>Correct</Text>
+          ) : (<Text>Incorrect</Text>)
+        )}
+      </Box>
 
     </Box>
   )
