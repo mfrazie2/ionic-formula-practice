@@ -17,7 +17,7 @@ export default function RichTextInput() {
 
   const handleChange = useCallback((value: string) => {
     dispatch(actions.setUserResponse(value));
-  }, []);
+  }, [dispatch]);
 
   return <Box className="richTextInput">
     <ReactQuill
