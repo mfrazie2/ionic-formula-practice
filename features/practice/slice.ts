@@ -1,41 +1,42 @@
 import { Ion } from '@/utils/buildFormula';
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import ReactQuill from 'react-quill';
-
-export type PracticeModes = {
-
-}
+import { PracticeSettings, defaultPracticeSettings } from './types';
 
 export interface PracticeState {
-  cation: Ion | null;
-  anion: Ion | null;
+  cation: Ion;
+  anion: Ion;
+  compound: string;
   isCorrect: boolean | null;
-  practiceMode: null;
   showCationHint: boolean;
   showAnionHint: boolean;
   userResponse: string;
+  practiceSettings: PracticeSettings;
 }
 
 const initialState: PracticeState = {
-  cation: null,
-  anion: null,
+  cation: null!,
+  anion: null!,
+  compound: '',
   showAnionHint: false,
   showCationHint: false,
-  practiceMode: null,
   userResponse: '',
   isCorrect: null,
+  practiceSettings: defaultPracticeSettings
 }
 
 export const practiceSlice = createSlice({
   name: 'practice',
   initialState,
   reducers: {
-    setCation: (state, action: PayloadAction<Ion | null>) => {
+    setCation: (state, action: PayloadAction<Ion>) => {
       state.cation = action.payload;
     },
-    setAnion: (state, action: PayloadAction<Ion | null>) => {
+    setAnion: (state, action: PayloadAction<Ion>) => {
       state.anion = action.payload;
+    },
+    setCompound: (state, action: PayloadAction<string>) => {
+      state.compound = action.payload;
     },
     setUserResponse: (state, action: PayloadAction<string>) => {
       state.userResponse = action.payload;
@@ -46,8 +47,11 @@ export const practiceSlice = createSlice({
     showCationHint: (state) => {
       state.showCationHint = true;
     },
-    setIsCorrect: (state, action: PayloadAction<boolean>) => {
+    setIsCorrect: (state, action: PayloadAction<boolean | null>) => {
       state.isCorrect = action.payload;
+    },
+    setPracticeSettings: (state, action: PayloadAction<PracticeSettings>) => {
+      state.practiceSettings = action.payload;
     },
     resetState: () => initialState,
   },
