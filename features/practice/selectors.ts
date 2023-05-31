@@ -9,3 +9,7 @@ export const selectIsCorrect = createSelector(selectPracticeState, ({ isCorrect 
 
 export const selectShowCationHint = createSelector(selectPracticeState, ({ showCationHint }) => showCationHint);
 export const selectShowAnionHint = createSelector(selectPracticeState, ({ showAnionHint }) => showAnionHint);
+export const selectCation = createSelector(selectPracticeState, ({ cation }) => cation);
+export const selectAnion = createSelector(selectPracticeState, ({ anion }) => anion);
+export const selectCompound = createSelector(selectPracticeState, ({ compound }) => compound);
+export const selectAnswer = createSelector(selectPracticeState, ({ compound }) => compound);
