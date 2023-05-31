@@ -6,6 +6,8 @@ const colors = {
     slateGray: "#6f7d8cff",
     pigmentGreen: "#52aa5eff",
     carmine: "#9a031eff",
+    pigmentGreen60: "#52aa5e99",
+    carmine40: "#9a031e66",
     spaceCadet: "#171738ff",
 }
 
