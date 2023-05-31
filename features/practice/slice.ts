@@ -41,11 +41,11 @@ export const practiceSlice = createSlice({
     setUserResponse: (state, action: PayloadAction<string>) => {
       state.userResponse = action.payload;
     },
-    showAnionHint: (state) => {
-      state.showAnionHint = true;
+    showAnionHint: (state, action: PayloadAction<boolean>) => {
+      state.showAnionHint = action.payload;
     },
-    showCationHint: (state) => {
-      state.showCationHint = true;
+    showCationHint: (state, action: PayloadAction<boolean>) => {
+      state.showCationHint = action.payload;
     },
     setIsCorrect: (state, action: PayloadAction<boolean | null>) => {
       state.isCorrect = action.payload;
