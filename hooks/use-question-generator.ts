@@ -23,6 +23,8 @@ export const useQuestionGenerator = () => {
     batch(() => {
       dispatch(actions.setAnion(anion));
       dispatch(actions.setCation(cation));
+      dispatch(actions.showAnionHint(false));
+      dispatch(actions.showCationHint(false));
       dispatch(actions.setCompound(compound));
       dispatch(actions.setIsCorrect(null));
       dispatch(actions.setUserResponse(''));
