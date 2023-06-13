@@ -234,18 +234,18 @@
       "formula": "P<sup>3-</sup>"
     },
     {
-      "name": "chlorate",
-      "baseFormula": "ClO<sub>3</sub>",
-      "chargeMagnitude": 1,
-      "requireParens": true,
-      "formula": "ClO<sub>3</sub><sup>-</sup>"
-    },
-    {
       "name": "perchlorate",
       "baseFormula": "ClO<sub>4</sub>",
       "chargeMagnitude": 1,
       "requireParens": true,
       "formula": "ClO<sub>4</sub><sup>-</sup>"
+    },
+    {
+      "name": "chlorate",
+      "baseFormula": "ClO<sub>3</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "ClO<sub>3</sub><sup>-</sup>"
     },
     {
       "name": "chlorite",
@@ -351,6 +351,13 @@
       "chargeMagnitude": 1,
       "requireParens": true,
       "formula": "OH<sup>-</sup>"
+    },
+    {
+      "name": "peroxide",
+      "baseFormula": "O<sub>2</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": "true",
+      "formula": "O<sub>2</sub><sup>2-</sup>"
     }
   ]
 }
