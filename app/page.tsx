@@ -1,98 +1,32 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import { Box, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link'
+import IonCardLayout from './learn/ion-card-layout';
+import { CHLORIDE, SODIUM } from './learn/ion-examples';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <Box as="main" maxW="1280px" p="40px 80px" mx="auto">
+      <div>
+        <Heading size='lg'>Welcome to Ionic Formula Practice</Heading>
+        <Box marginY="4">
+          <Text>This site is built to help you practice writing ionic formulas. On the <Link href='/practice'><Text as="span" textDecoration="underline">Practice</Text></Link> page, you will be able to work on writing formulas from compound names or writing ion formulas from an ion name. There are also controls to practice naming compounds from a compound.</Text>
+        </Box>
+        <Box marginY="4">
+          <Text>If you are ever stuck while working on a problem, you can use a hint or see the full list of ions on the <Link href={"/ion-list"}><Text as="span" textDecoration="underline">Ion List</Text></Link> page.</Text>
+        </Box>
+        <Box marginY="4">
+          <Text>On the <Link href='/learn'><Text as="span" textDecoration="underline">Learn</Text></Link> page, you can review a technique for determining how translate a compound name to formula by equalizing the charges. There are additional tips for some trickier ions to help you get unstuck.</Text>
+          <IonCardLayout
+            anion={CHLORIDE}
+            cation={SODIUM}
+            templateRowCount={1}
+          />
+        </Box>
+        <Box marginY="4">
+          <Text>Thank you for using this site to practice your ionic formulas. If you find any problems (spelling, formulas, etc.), please reach out to <Link href="mailto:me@mikedoescoding.com"><Text as="span" textDecoration="underline">me</Text></Link> so this can be a helpful resource.</Text>
+        </Box>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <Link href={"/ion-list"}>Ion List</Link>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </Box >
   )
 }
