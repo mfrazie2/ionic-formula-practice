@@ -12,7 +12,7 @@ export default function Navigation() {
 
     return (
         <Box w="100%" bg="spaceCadet">
-            <Flex as="nav" dir='row' alignItems="center" justifyContent="space-between" maxW="1280px" px="80px" h="120px" mx="auto">
+            <Flex as="nav" dir='row' alignItems="center" justifyContent="space-between" maxW={["100%", "1280px"]} px={[2, 4, 6, 8]} h="120px" mx="auto">
                 <Link href="/">
                     <Image
                         src="/logo.svg"

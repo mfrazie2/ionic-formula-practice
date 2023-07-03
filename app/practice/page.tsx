@@ -12,6 +12,7 @@ import Feedback from "@/components/common/feedback";
 import ActionContainer from "@/components/common/action-container";
 import PracticeHeader from "@/components/common/practice-header";
 import PracticePrompt from "@/components/common/practice-prompt";
+import ContentWrapper from "@/components/common/content-wrapper";
 
 export default function Practice() {
   const {
@@ -33,7 +34,7 @@ export default function Practice() {
   }, [settings, getNewCompound])
 
   return (
-    <Box maxW="1280px" p="40px 80px" mx="auto">
+    <ContentWrapper>
       <PracticeHeader />
       <Card p="16px" size="lg">
         <PracticePrompt />
@@ -45,6 +46,6 @@ export default function Practice() {
           <ActionContainer />
         </CardFooter>
       </Card>
-    </Box>
+    </ContentWrapper>
   )
 }

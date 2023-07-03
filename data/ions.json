@@ -356,7 +356,7 @@
       "name": "peroxide",
       "baseFormula": "O<sub>2</sub>",
       "chargeMagnitude": 2,
-      "requireParens": "true",
+      "requireParens": true,
       "formula": "O<sub>2</sub><sup>2-</sup>"
     }
   ]

@@ -3,10 +3,11 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 import Link from 'next/link'
 import IonCardLayout from './learn/ion-card-layout';
 import { CHLORIDE, SODIUM } from './learn/ion-examples';
+import ContentWrapper from '@/components/common/content-wrapper';
 
 export default function Home() {
   return (
-    <Box as="main" maxW="1280px" p="40px 80px" mx="auto">
+    <ContentWrapper>
       <div>
         <Heading size='lg'>Welcome to Ionic Formula Practice</Heading>
         <Box marginY="4">
@@ -27,6 +28,6 @@ export default function Home() {
           <Text>Thank you for using this site to practice your ionic formulas. If you find any problems (spelling, formulas, etc.), please reach out to <Link href="mailto:me@mikedoescoding.com"><Text as="span" textDecoration="underline">me</Text></Link> so this can be a helpful resource.</Text>
         </Box>
       </div>
-    </Box >
+    </ContentWrapper >
   )
 }
