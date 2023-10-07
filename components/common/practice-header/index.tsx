@@ -1,3 +1,5 @@
+"use client";
+
 import { useAppSelector } from "@/app/hooks";
 import { selectPracticeMode } from "@/features/practice/selectors";
 import { Flex, Heading } from "@chakra-ui/react";

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box } from "@chakra-ui/react";
 
 export default function ContentWrapper({ children }: { children: React.ReactNode }) {

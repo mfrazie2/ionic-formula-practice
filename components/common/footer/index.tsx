@@ -10,7 +10,7 @@ import { FaEnvelope, FaGithubSquare, FaLinkedin, FaHome } from 'react-icons/fa'
 
 export default function Footer() {
     const [isMobile] = useMediaQuery('(max-width: 800px)', {
-        ssr: false,
+        ssr: true,
         fallback: false, // return false on the server, and re-evaluate on the client side
     });
 

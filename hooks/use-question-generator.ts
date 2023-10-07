@@ -1,5 +1,7 @@
+"use client";
+
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
-import { selectAnswer, selectCleanedUserResponse, selectPracticeSettings, selectUserResponse } from "@/features/practice/selectors";
+import { selectAnswer, selectCleanedUserResponse, selectPracticeSettings } from "@/features/practice/selectors";
 import { actions } from "@/features/practice/slice";
 import { checkAnswer } from "@/utils/checkAnswer";
 import { getRandomCompound } from "@/utils/getIons";

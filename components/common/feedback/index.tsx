@@ -1,3 +1,5 @@
+"use client";
+
 import { useAppSelector } from "@/app/hooks"
 import { selectAnswer, selectIsCorrect } from "@/features/practice/selectors"
 import { Box, Text } from "@chakra-ui/layout";

@@ -1,3 +1,5 @@
+"use client";
+
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { selectAnionHint, selectCationHint, selectPracticeType, selectShowAnionHint, selectShowCationHint } from "@/features/practice/selectors";
 import { actions } from "@/features/practice/slice";

@@ -1,18 +1,5 @@
-"use client";
+import IonListContent from './ion-list-content';
 
-import { Flex } from '@chakra-ui/layout'
-import data from '../../data/ions.json'
-import IonColumn from './ion-column';
-import ContentWrapper from '@/components/common/content-wrapper';
+const IonList = () => (<IonListContent />)
 
-export default function IonList() {
-
-    return (
-        <ContentWrapper>
-            <Flex justifyContent="space-evenly">
-                <IonColumn ionList={data.cations} title="Cation" />
-                <IonColumn ionList={data.anions} title="Anion" />
-            </Flex>
-        </ContentWrapper>
-    )
-}
+export default IonList;

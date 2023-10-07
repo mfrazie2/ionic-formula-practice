@@ -1,3 +1,4 @@
+"use client";
 import { Ion } from "@/utils/buildFormula";
 import { Grid, GridItem, Card, CardBody, Text } from "@chakra-ui/react";
 import { memo, useMemo } from "react";

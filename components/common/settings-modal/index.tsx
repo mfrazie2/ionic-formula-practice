@@ -1,6 +1,10 @@
+"use client";
+
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { selectPracticeSettings } from "@/features/practice/selectors";
-import { Button, Divider, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Switch, useDisclosure } from "@chakra-ui/react"
+import {
+  Button, Divider, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Switch, useDisclosure
+} from "@chakra-ui/react"
 import { FaSlidersH } from "react-icons/fa"
 
 import { Radio, RadioGroup } from '@chakra-ui/react'
@@ -13,7 +17,6 @@ export default function BasicUsage() {
   const dispatch = useAppDispatch();
   const practiceSettings = useAppSelector(selectPracticeSettings);
   const [updatedSettings, setUpdatedSettings] = useState<PracticeSettings>(practiceSettings);
-
 
   const handleModeChange = useCallback((value: string) => {
     setUpdatedSettings({
@@ -42,7 +45,6 @@ export default function BasicUsage() {
   return (
     <>
       <Button variant="link" leftIcon={<FaSlidersH />} onClick={onOpen}>Settings</Button>
-
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

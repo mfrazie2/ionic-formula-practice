@@ -1,13 +1,15 @@
+"use client"
+
 import { Ion } from "@/utils/buildFormula";
 import { Flex, Heading, Text } from "@chakra-ui/layout";
+import { memo } from "react";
 
 interface Props {
   ionList: Ion[];
   title: string;
 }
 
-export default function IonColumn({ ionList, title }: Props) {
-
+const IonColumn = ({ ionList, title }: Props) => {
   return (
     <Flex textAlign="center" flexDirection='column'>
       <Heading as="h2" textDecoration="underline" mb="24px">{title}</Heading>
@@ -20,3 +22,5 @@ export default function IonColumn({ ionList, title }: Props) {
     </Flex>
   )
 }
+
+export default memo(IonColumn);

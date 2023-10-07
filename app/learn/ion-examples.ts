@@ -1,3 +1,4 @@
+"use client";
 export const SODIUM = {
   "name": "sodium",
   "baseFormula": "Na",
