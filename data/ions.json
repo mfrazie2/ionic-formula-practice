@@ -1,0 +1,363 @@
+{
+  "cations": [
+    {
+      "name": "sodium",
+      "baseFormula": "Na",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Na<sup>+</sup>"
+    },
+    {
+      "name": "lithium",
+      "baseFormula": "Li",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Li<sup>+</sup>"
+    },
+    {
+      "name": "potassium",
+      "baseFormula": "K",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "K<sup>+</sup>"
+    },
+    {
+      "name": "ammonium",
+      "baseFormula": "NH<sub>4</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "NH<sub>4</sub><sup>+</sup>"
+    },
+    {
+      "name": "calcium",
+      "baseFormula": "Ca",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Ca<sup>2+</sup>"
+    },
+    {
+      "name": "magnesium",
+      "baseFormula": "Mg",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Mg<sup>2+</sup>"
+    },
+    {
+      "name": "strontium",
+      "baseFormula": "Sr",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Sr<sup>2+</sup>"
+    },
+    {
+      "name": "barium",
+      "baseFormula": "Ba",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Ba<sup>2+</sup>"
+    },
+    {
+      "name": "iron(II)",
+      "baseFormula": "Fe",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Fe<sup>2+</sup>"
+    },
+    {
+      "name": "iron(III)",
+      "baseFormula": "Fe",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "Fe<sup>3+</sup>"
+    },
+    {
+      "name": "cobalt(II)",
+      "baseFormula": "Co",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Co<sup>2+</sup>"
+    },
+    {
+      "name": "cobalt(III)",
+      "baseFormula": "Co",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "Co<sup>3+</sup>"
+    },
+    {
+      "name": "manganese(VII)",
+      "baseFormula": "Mn",
+      "chargeMagnitude": 7,
+      "requireParens": false,
+      "formula": "Mn<sup>7+</sup>"
+    },
+    {
+      "name": "silver",
+      "baseFormula": "Ag",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Ag<sup>+</sup>"
+    },
+    {
+      "name": "mercury(II)",
+      "baseFormula": "Hg",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Hg<sup>2+</sup>"
+    },
+    {
+      "name": "mercury(I)",
+      "baseFormula": "Hg<sub>2</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "Hg<sub>2</sub><sup>2+</sup>"
+    },
+    {
+      "name": "aluminum",
+      "baseFormula": "Al",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "Al<sup>3+</sup>"
+    },
+    {
+      "name": "tin(II)",
+      "baseFormula": "Sn",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Sn<sup>2+</sup>"
+    },
+    {
+      "name": "tin(IV)",
+      "baseFormula": "Sn",
+      "chargeMagnitude": 4,
+      "requireParens": false,
+      "formula": "Sn<sup>4+</sup>"
+    },
+    {
+      "name": "lead(II)",
+      "baseFormula": "Pb",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Pb<sup>2+</sup>"
+    },
+    {
+      "name": "lead(IV)",
+      "baseFormula": "Pb",
+      "chargeMagnitude": 4,
+      "requireParens": false,
+      "formula": "Pb<sup>4+</sup>"
+    },
+    {
+      "name": "gold(III)",
+      "baseFormula": "Au",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "Au<sup>3+</sup>"
+    },
+    {
+      "name": "copper(II)",
+      "baseFormula": "Cu",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Cu<sup>2+</sup>"
+    },
+    {
+      "name": "copper(I)",
+      "baseFormula": "Cu",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Cu<sup>+</sup>"
+    },
+    {
+      "name": "zinc",
+      "baseFormula": "Zn",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "Zn<sup>2+</sup>"
+    }
+  ],
+  "anions": [
+    {
+      "name": "fluoride",
+      "baseFormula": "F",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "F<sup>-</sup>"
+    },
+    {
+      "name": "chloride",
+      "baseFormula": "Cl",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Cl<sup>-</sup>"
+    },
+    {
+      "name": "bromide",
+      "baseFormula": "Br",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "Br<sup>-</sup>"
+    },
+    {
+      "name": "iodide",
+      "baseFormula": "I",
+      "chargeMagnitude": 1,
+      "requireParens": false,
+      "formula": "I<sup>-</sup>"
+    },
+    {
+      "name": "oxide",
+      "baseFormula": "O",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "O<sup>2-</sup>"
+    },
+    {
+      "name": "sulfide",
+      "baseFormula": "S",
+      "chargeMagnitude": 2,
+      "requireParens": false,
+      "formula": "S<sup>2-</sup>"
+    },
+    {
+      "name": "nitride",
+      "baseFormula": "N",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "N<sup>3-</sup>"
+    },
+    {
+      "name": "phosphide",
+      "baseFormula": "P",
+      "chargeMagnitude": 3,
+      "requireParens": false,
+      "formula": "P<sup>3-</sup>"
+    },
+    {
+      "name": "perchlorate",
+      "baseFormula": "ClO<sub>4</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "ClO<sub>4</sub><sup>-</sup>"
+    },
+    {
+      "name": "chlorate",
+      "baseFormula": "ClO<sub>3</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "ClO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "chlorite",
+      "baseFormula": "ClO<sub>2</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "ClO<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "hypochlorite",
+      "baseFormula": "ClO",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "ClO<sup>-</sup>"
+    },
+    {
+      "name": "nitrate",
+      "baseFormula": "NO<sub>3</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "NO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "nitrite",
+      "baseFormula": "NO<sub>2</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "NO<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "acetate",
+      "baseFormula": "C<sub>2</sub>H<sub>3</sub>O<sub>2</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "C<sub>2</sub>H<sub>3</sub>O<sub>2</sub><sup>-</sup>"
+    },
+    {
+      "name": "phosphate",
+      "baseFormula": "PO<sub>4</sub>",
+      "chargeMagnitude": 3,
+      "requireParens": true,
+      "formula": "PO<sub>4</sub><sup>3-</sup>"
+    },
+    {
+      "name": "phosphite",
+      "baseFormula": "PO<sub>3</sub>",
+      "chargeMagnitude": 3,
+      "requireParens": true,
+      "formula": "PO<sub>3</sub><sup>3-</sup>"
+    },
+    {
+      "name": "sulfate",
+      "baseFormula": "SO<sub>4</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "SO<sub>4</sub><sup>2-</sup>"
+    },
+    {
+      "name": "sulfite",
+      "baseFormula": "SO<sub>3</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "SO<sub>3</sub><sup>2-</sup>"
+    },
+    {
+      "name": "chromate",
+      "baseFormula": "CrO<sub>4</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "CrO<sub>4</sub><sup>2-</sup>"
+    },
+    {
+      "name": "dichromate",
+      "baseFormula": "Cr<sub>2</sub>O<sub>7</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>"
+    },
+    {
+      "name": "carbonate",
+      "baseFormula": "CO<sub>3</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "CO<sub>3</sub><sup>2-</sup>"
+    },
+    {
+      "name": "bicarbonate",
+      "baseFormula": "HCO<sub>3</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "HCO<sub>3</sub><sup>-</sup>"
+    },
+    {
+      "name": "permanganate",
+      "baseFormula": "MnO<sub>4</sub>",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "MnO<sub>4</sub><sup>-</sup>"
+    },
+    {
+      "name": "hydroxide",
+      "baseFormula": "OH",
+      "chargeMagnitude": 1,
+      "requireParens": true,
+      "formula": "OH<sup>-</sup>"
+    },
+    {
+      "name": "peroxide",
+      "baseFormula": "O<sub>2</sub>",
+      "chargeMagnitude": 2,
+      "requireParens": true,
+      "formula": "O<sub>2</sub><sup>2-</sup>"
+    }
+  ]
+}
