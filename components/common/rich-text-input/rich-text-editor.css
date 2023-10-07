@@ -1,0 +1,40 @@
+.rich-text-input {
+  background: #f5f3f5ff;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  display: block;
+  max-height: 4em;
+  padding: 1em;
+}
+
+.rich-text-input .ProseMirror {
+  outline: none;
+}
+
+.rich-text-input .tiptap p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  font-style: italic;
+  height: 0;
+  pointer-events: none;
+}
+
+.rich-text-menu {
+  background: #D9D9D9;
+  border: 1px solid #ccc;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  color: #171738ff;
+}
+
+.rich-text-menu svg {
+  fill: #171738ff
+}
+
+.rich-text-menu .is-active svg,
+.rich-text-menu svg:hover {
+  font-weight: bold;
+  fill: #06c;
+}
