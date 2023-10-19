@@ -4,6 +4,7 @@ import { CardHeader, Heading } from "@chakra-ui/react";
 import { useAppSelector } from "@/app/hooks";
 import { selectPrompt, selectShowHintsSetting } from "@/features/practice/selectors";
 import PromptHint from "./prompt-hint";
+import TransitionMetalHint from "./transition-metal-hint";
 
 
 export default function PracticePrompt() {
@@ -25,6 +26,7 @@ export default function PracticePrompt() {
           <PromptHint />
         )
       }
+      <TransitionMetalHint />
     </CardHeader>
   )
 }
