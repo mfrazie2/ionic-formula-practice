@@ -33,8 +33,7 @@
   fill: #171738ff
 }
 
-.rich-text-menu .is-active svg,
-.rich-text-menu svg:hover {
-  font-weight: bold;
+.rich-text-menu button.is-active svg,
+.rich-text-menu button:hover svg {
   fill: #06c;
 }

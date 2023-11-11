@@ -7,7 +7,7 @@ import Subscript from '@tiptap/extension-subscript'
 import Superscript from '@tiptap/extension-superscript'
 import Text from '@tiptap/extension-text';
 import { useEditor, EditorContent } from '@tiptap/react'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import "./rich-text-editor.css";
 import { Box, Button } from '@chakra-ui/react';
 import { FaSubscript, FaSuperscript } from 'react-icons/fa';
@@ -19,7 +19,7 @@ const RichTextInput = () => {
   const dispatch = useAppDispatch();
   const userResp = useAppSelector(selectUserResponse)
 
-  const [enabledFormatting, setEnabledFormatting] = useState<'sub' | 'super' | null>(null);
+  const enabledFormattingRef = useRef<'sub' | 'super' | null>(null);
 
   const editor = useEditor({
     extensions: [
@@ -33,9 +33,7 @@ const RichTextInput = () => {
       Text,
     ],
     onUpdate({ editor }) {
-      console.log(editor.getHTML());
       dispatch(actions.setUserResponse(editor.getHTML()))
-      // this is the way to go...maybe strip off <p></p> somehow in checker?
     }
   })
 
@@ -49,26 +47,26 @@ const RichTextInput = () => {
   const handleButtonClick = useCallback((type: 'sub' | 'super') => () => {
     if (type === 'sub') {
       toggleSubscript();
-      if (enabledFormatting === 'sub') {
-        setEnabledFormatting(null);
+      if (enabledFormattingRef.current === 'sub') {
+        enabledFormattingRef.current = null;
       } else {
-        if (enabledFormatting === 'super') {
+        if (enabledFormattingRef.current === 'super') {
           toggleSuperscript();
         }
-        setEnabledFormatting('sub');
+        enabledFormattingRef.current = 'sub';
       }
     } else {
       toggleSuperscript();
-      if (enabledFormatting === 'super') {
-        setEnabledFormatting(null);
+      if (enabledFormattingRef.current === 'super') {
+        enabledFormattingRef.current = null;
       } else {
-        if (enabledFormatting === 'sub') {
+        if (enabledFormattingRef.current === 'sub') {
           toggleSubscript();
         }
-        setEnabledFormatting('super');
+        enabledFormattingRef.current = 'super';
       }
     }
-  }, [enabledFormatting, toggleSubscript, toggleSuperscript]);
+  }, [toggleSubscript, toggleSuperscript]);
 
 
   // Handle when userResponse is reset in state
@@ -85,15 +83,15 @@ const RichTextInput = () => {
   return (
     <Box className='rich-text-editor'>
       <Box className='rich-text-menu' p={2}>
-        <Button variant='link' size='xs'
+        <Button variant='outline' size='xs'
           rightIcon={<FaSuperscript />}
           onClick={handleButtonClick('super')}
-          className={editor.isActive('superscript') ? 'is-active' : ''}
+          className={enabledFormattingRef.current === 'super' ? 'is-active' : ''}
         />
-        <Button variant='link' size='xs'
+        <Button variant='outline' size='xs'
           rightIcon={<FaSubscript />}
           onClick={handleButtonClick('sub')}
-          className={editor.isActive('subscript') ? 'is-active' : ''}
+          className={enabledFormattingRef.current === 'sub' ? 'is-active' : ''}
         />
       </Box>
 
