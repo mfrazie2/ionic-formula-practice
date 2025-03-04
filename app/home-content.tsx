@@ -26,7 +26,7 @@ const HomeContent = () => {
           />
         </Box>
         <Box marginY="4">
-          <Text>Thank you for using this site to practice your ionic formulas. If you find any problems (spelling, formulas, etc.), please reach out to <Link href="mailto:me@mikedoescoding.com"><Text as="span" textDecoration="underline">me</Text></Link> so this can be a helpful resource.</Text>
+          <Text>Thank you for using this site to practice your ionic formulas. If you find any problems (spelling, formulas, etc.), please reach out to <Link href="mailto:mikedoescoding@gmail.com"><Text as="span" textDecoration="underline">me</Text></Link> so this can be a helpful resource.</Text>
         </Box>
       </div>
     </ContentWrapper >
